@@ -70,8 +70,7 @@ app.use((req, res) => {
   res.status(404).json({ message: 'Ruta no encontrada' });
 });
 
-// Iniciar el servidor en el puerto 3003
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT;  // Render asignará un puerto automáticamente.
 app.listen(PORT, () => {
-  console.log(`Servidor en ejecución en http://localhost:${PORT}`);
+    console.log(`API escuchando en el puerto ${PORT}`);
 });
